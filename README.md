@@ -1,10 +1,10 @@
-Amazon Consumer Behavior & Purchase Analysis
+# Amazon Consumer Behavior & Purchase Analysis
 
-Project Overview
+# Project Overview
 
 This project analyzes consumer behavior and purchasing patterns using an Amazon dataset. By leveraging Malloy, we explore key insights such as revenue distribution, purchasing habits, and survey responses linked to consumer demographics. The analysis aims to uncover trends that can inform business strategies, marketing decisions, and customer engagement improvements.
 
-Why This Project is Important
+# Why This Project is Important
 
 Understanding how consumers interact with e-commerce platforms like Amazon is crucial for businesses and researchers. Our analysis provides insights into:
 
@@ -18,7 +18,7 @@ The relationship between survey responses and spending patterns
 
 These findings can help businesses tailor marketing strategies, optimize inventory management, and enhance customer experience.
 
-Data Cleaning & Preprocessing
+# Data Cleaning & Preprocessing
 
 Before running the analysis, we conducted the following data cleaning steps:
 
@@ -32,33 +32,21 @@ Categorization: Standardized category names for consistent aggregation.
 
 Merging Datasets: Linked purchase and survey data using Survey ResponseID to enable cross-analysis.
 
-Key Findings
+# Key Findings
 
-1. Revenue & Purchasing Trends
+1. Total Purchases per State
+![image](https://github.com/user-attachments/assets/80fd4cc6-07ea-4163-85c4-d77418a0809a)
+2. Average Spending Amount by Product Category and Age
+![image](https://github.com/user-attachments/assets/42921ea6-5de2-4be5-a7c7-66101aa2c517)
+3. Most Purchased Product Categories
+![image](https://github.com/user-attachments/assets/17574f8a-9bf5-422a-b937-d1d89d0fcb8e)
+4. Total Revenue per State
+![image](https://github.com/user-attachments/assets/e16b93d7-658e-4a3e-ae59-6dcb9bc8fd7c)
+5. Top 10 Best-Selling Products by Quantity
+![image](https://github.com/user-attachments/assets/692c6a3a-d0fc-4623-8f0e-eeadd280faa2)
 
-The top 10 best-selling products contributed to over 40% of total revenue.
 
-The highest revenue-generating categories were electronics, books, and household items.
-
-Seasonal trends showed a spike in purchases during Q4, likely due to holiday shopping.
-
-2. Consumer Behavior Insights
-
-Higher-income consumers spent significantly more on electronics and luxury goods.
-
-Amazon usage frequency was highest among young adults aged 25-34.
-
-Users with disabilities had unique spending patterns, indicating potential areas for inclusive marketing.
-
-3. Survey Insights & Business Impact
-
-Over 60% of respondents expressed concerns about selling their data, which may impact Amazon’s data monetization strategies.
-
-Consumers experiencing major life changes (e.g., moving, job changes) exhibited increased spending.
-
-Small business owners heavily relied on Amazon, indicating opportunities for tailored B2B services.
-
-How to Build on This Work
+# How to Build on This Work
 
 Extending the Analysis
 
@@ -79,7 +67,7 @@ Install required dependencies (if applicable).
 
 Use Malloy to run the provided queries and generate reports.
 
-Acknowledgments
+# Acknowledgments
 
-Special thanks to our professor and course team for guidance on this project. Also, thanks to open-source contributors for their tools and documentation that made this analysis possible.
+Special thanks to our professor for guidance on this project. Also, thanks to open-source contributors for their tools and documentation that made this analysis possible.
 

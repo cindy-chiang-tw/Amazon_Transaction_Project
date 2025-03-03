@@ -1,0 +1,130 @@
+>>>malloy
+source: purchase is duckdb.table('./amazon-purchases.csv') extend{
+rename:survey_ID is `Survey ResponseID`
+rename:Purchase_Price_Per_Unit is `Purchase Price Per Unit`
+
+primary_key:survey_ID
+}
+source: survey is duckdb.table('./survey.csv') extend{
+join_one:purchase with `Survey ResponseID`
+}
+>>>markdown
+1. Total Purchases per State
+>>>malloy
+# shape_map
+run: purchase -> {
+  group_by: `Shipping Address State`
+  aggregate: total_purchases is count()
+}
+>>>markdown
+2. Average Spending Amount by Product Category and Age
+>>>malloy
+# bar_chart
+run: survey -> {
+  group_by: purchase.Category
+  group_by:`Q-demos-age`
+  aggregate: avg_spent is avg(purchase.Purchase_Price_Per_Unit)
+}
+>>>markdown
+3. Most Purchased Product Categories
+>>>malloy
+# bar_chart
+run: purchase -> {
+  where:Category IS NOT NULL
+  group_by: Category
+  aggregate: purchase_count is count()
+  order_by: purchase_count desc
+}
+>>>markdown
+4. Total Revenue per State
+>>>malloy
+# shape_map
+run: survey -> {
+  where:purchase.`Shipping Address State` is NOT NULL
+  group_by: purchase.`Shipping Address State`
+  aggregate: total_revenue is sum(purchase.Purchase_Price_Per_Unit * purchase.Quantity)
+}
+>>>markdown
+5. Top 10 Best-Selling Products by Quantity
+>>>malloy
+# bar_chart
+run: purchase -> {
+where: Title is NOT NULL
+  group_by: Title
+  aggregate: total_sold is sum(Quantity)
+  order_by: total_sold desc
+  limit: 10
+}
+>>>markdown
+6. Average Spending by Age Group
+>>>malloy
+# pie_chart
+run: survey -> {
+  group_by: `Q-demos-age`
+  aggregate: avg_spent is purchase.avg( purchase.Purchase_Price_Per_Unit * purchase.Quantity)
+}
+>>>markdown
+7. Total Purchases by Gender
+>>>malloy
+# bar_chart
+run: survey -> {
+  group_by: `Q-demos-gender`
+  aggregate: total_purchases is purchase.count()
+}
+>>>markdown
+8. Average Purchase Price per Category
+>>>malloy
+run: purchase -> {
+  group_by: Category
+  aggregate: avg_price is avg(Purchase_Price_Per_Unit)
+}
+>>>markdown
+9. Survey Respondents' Education Distribution
+>>>malloy
+run: survey -> {
+  group_by: `Q-demos-education`
+  aggregate: num_respondents is count()
+}
+>>>markdown
+10. Purchase Behavior by Age Group
+>>>malloy
+run: survey -> {
+  group_by: `Q-demos-age`
+  aggregate: total_spent is sum(purchase.Purchase_Price_Per_Unit * purchase.Quantity)
+}
+>>>markdown
+11. Amazon Usage Frequency Distribution
+>>>malloy
+run: survey -> {
+  group_by: `Q-amazon-use-how-oft`
+  aggregate: num_users is count()
+}
+>>>markdown
+12.  Average Household Size of Amazon Users
+>>>malloy
+run: survey -> {
+  group_by: `Q-amazon-use-hh-size`
+  aggregate: amount is count()
+}
+>>>markdown
+13. Percentage of Users Willing to Sell Their Data
+>>>malloy
+run: survey -> {
+  aggregate: pct_sell_data is count(`Q-sell-YOUR-data`) / count() * 100
+}
+>>>markdown
+14. Average Spending by Household Size
+>>>malloy
+run: survey -> {
+  group_by: `Q-amazon-use-hh-size`
+  aggregate: avg_spent is avg(purchase.Purchase_Price_Per_Unit * purchase.Quantity)
+}
+>>>markdown
+15. Alcohol Purchases vs. Alcohol Consumption
+>>>malloy
+run: survey -> {
+  group_by: `Q-demos-income` 
+  where:purchase.Category is not null
+  group_by: purchase.Category
+  aggregate: total_spent is purchase.sum(purchase.Purchase_Price_Per_Unit * purchase.Quantity)
+}

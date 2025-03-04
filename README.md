@@ -67,7 +67,5 @@ Install required dependencies (if applicable).
 
 Use Malloy to run the provided queries and generate reports.
 
-# Acknowledgments
 
-Special thanks to our professor for guidance on this project. Also, thanks to open-source contributors for their tools and documentation that made this analysis possible.
 

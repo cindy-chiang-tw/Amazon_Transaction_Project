@@ -2,19 +2,21 @@
 
 # Project Overview
 
-This project analyzes consumer behavior and purchasing patterns using an Amazon dataset. By leveraging Malloy, we explore key insights such as revenue distribution, purchasing habits, and survey responses linked to consumer demographics. The analysis aims to uncover trends that can inform business strategies, marketing decisions, and customer engagement improvements.
+This project analyzes consumer behavior and purchasing patterns using an Amazon dataset. By leveraging Malloy, we explore key insights such as revenue distribution, purchasing habits, and survey responses linked to consumer demographics. The goal is to provide data-driven insights that can inform business strategies, marketing decisions, and customer engagement improvements.
 
 # Why This Project is Important
 
 Understanding how consumers interact with e-commerce platforms like Amazon is crucial for businesses and researchers. Our analysis provides insights into:
 
-Revenue trends by category and region
+* Total Revenue by region
 
-Consumer spending behavior based on demographics
+* Consumer spending behavior based on demographics
 
-The impact of life changes on purchasing habits
+* Most Purchased Product Categories
+  
+* Total Purchase by region
 
-The relationship between survey responses and spending patterns
+* Top 10 Best-Selling Products by Quantity
 
 These findings can help businesses tailor marketing strategies, optimize inventory management, and enhance customer experience.
 
@@ -22,13 +24,9 @@ These findings can help businesses tailor marketing strategies, optimize invento
 
 Before running the analysis, we conducted the following data cleaning steps:
 
-Handling Missing Values: Removed or imputed missing values in key fields such as purchase price, quantity, and survey responses.
+Handling Missing Values: Filtering missing values in key fields such as purchase price, quantity, and survey responses.
 
 Standardizing Date Formats: Ensured consistency in Order Date format for time-series analysis.
-
-Removing Duplicates: Checked for and removed duplicate entries in both purchase and survey datasets.
-
-Categorization: Standardized category names for consistent aggregation.
 
 Merging Datasets: Linked purchase and survey data using Survey ResponseID to enable cross-analysis.
 

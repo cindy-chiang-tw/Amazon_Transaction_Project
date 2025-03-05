@@ -8,15 +8,15 @@ This project analyzes consumer behavior and purchasing patterns using an Amazon 
 
 Understanding how consumers interact with e-commerce platforms like Amazon is crucial for businesses and researchers. Our analysis provides insights into:
 
-* Total Revenue by region
+* **Total Revenue by region**
 
-* Consumer spending behavior based on demographics
+* **Consumer spending behavior based on demographics**
 
-* Most Purchased Product Categories
+* **Most Purchased Product Categories**
   
-* Total Purchase by region
+* **Total Purchase by region**
 
-* Top 10 Best-Selling Products by Quantity
+* **Top 10 Best-Selling Products by Quantity**
 
 These findings can help businesses tailor marketing strategies, optimize inventory management, and enhance customer experience.
 

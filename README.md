@@ -22,7 +22,7 @@ These findings can help businesses tailor marketing strategies, optimize invento
 
 # Data Cleaning & Preprocessing
 
-Before running the analysis, we conducted the following data cleaning steps:
+**Before running the analysis, we conducted the following data cleaning steps:**
 
 Handling Missing Values: Filtering missing values in key fields such as purchase price, quantity, and survey responses.
 

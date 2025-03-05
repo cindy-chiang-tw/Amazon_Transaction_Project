@@ -32,7 +32,7 @@ Merging Datasets: Linked purchase and survey data using Survey ResponseID to ena
 
 # Key Findings
 
-* Total Purchases per State
+* **Total Purchases per State**
 ![image](https://github.com/user-attachments/assets/80fd4cc6-07ea-4163-85c4-d77418a0809a)  
   The heatmap analysis reveals significant variations in purchasing activity across U.S. states. **California, Texas, and Florida exhibit the highest purchase volumes**, likely due to their large populations, diverse consumer bases, and strong economic activity. These states also have major metropolitan areas with high concentrations of e-commerce users. Conversely, states with smaller populations, such as Wyoming and Vermont, show significantly lower purchase totals, which aligns with their lower number of potential consumers and less urbanized infrastructure.
 

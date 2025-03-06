@@ -36,6 +36,26 @@ run: purchase -> {
   order_by: purchase_count desc
 }
 >>>markdown
+ABIS_BOOK Consumer age distribution
+>>>malloy
+# bar_chart
+run: survey -> {
+  where:purchase.Category ='ABIS_BOOK'
+  aggregate: purchase_count is count()
+  group_by:`Q-demos-age`
+  order_by: `Q-demos-age` asc
+}
+>>>markdown
+Pet food consumer age group distrubution
+>>>malloy
+# bar_chart
+run: survey -> {
+  where:purchase.Category ='PET_FOOD'
+  aggregate: purchase_count is count()
+  group_by:`Q-demos-age`
+  order_by: `Q-demos-age` asc
+}
+>>>markdown
 4. Total Revenue per State
 >>>malloy
 # shape_map
